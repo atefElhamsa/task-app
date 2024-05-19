@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:tasks/core/utils/app_colors.dart';
 import 'package:tasks/core/utils/app_images.dart';
 import 'package:tasks/core/utils/app_texts.dart';
+import 'package:tasks/features/onboarding/views/widgets/navigate_container_widget.dart';
 
 class OnBoardingScreen extends StatelessWidget {
   const OnBoardingScreen({super.key});
@@ -50,40 +51,7 @@ class OnBoardingScreen extends StatelessWidget {
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.05,
               ),
-              Container(
-                decoration: BoxDecoration(
-                  gradient: const LinearGradient(
-                    colors: [
-                      AppColors.blue,
-                      AppColors.move,
-                    ],
-                  ),
-                  borderRadius: BorderRadius.circular(
-                      MediaQuery.of(context).size.width * 0.03),
-                ),
-                child: MaterialButton(
-                  onPressed: () {},
-                  child: Row(
-                    children: [
-                      Expanded(
-                        child: Text(
-                          AppTexts.letsStart,
-                          style: GoogleFonts.lexendDeca(
-                            textStyle: TextStyle(
-                              color: AppColors.white,
-                              fontWeight: FontWeight.w600,
-                              fontSize:
-                                  MediaQuery.of(context).size.height * 0.027,
-                            ),
-                          ),
-                          textAlign: TextAlign.center,
-                        ),
-                      ),
-                      Image.asset(AppImages.arrowLeft),
-                    ],
-                  ),
-                ),
-              ),
+              const NavigateContainerWidgetOnBoarding(),
             ],
           ),
         ),
